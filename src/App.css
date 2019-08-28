@@ -5,8 +5,13 @@ body {
   height: 100%;
   /* padding-top: 40px; */
   letter-spacing: normal;
-  overflow-y: auto;
+  overflow-y: hidden;
   font-weight: normal;
+}
+
+.overflow-y-auto {
+  height: calc(100vh - 75px);
+  overflow-y: auto;
 }
 
 .green {
@@ -17,7 +22,7 @@ body {
   margin-top: 10px !important;
 }
 
-.mt-10{
+.mt-10 {
   margin-top: 10px !important;
 }
 

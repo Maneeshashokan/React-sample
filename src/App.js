@@ -84,7 +84,7 @@ export default ClassComponent;
   export default StateupdatComponent;
 
 `,
-eventsComponentCode: `
+  eventsComponentCode: `
 import React, { Component } from "react";
 
 class EventsComponent extends Component {
@@ -151,17 +151,26 @@ class App extends Component {
   showCode(key) {
     switch (key) {
       case "Functional":
-        this.setState({ code: codeMap.functional, activeClass:"FUN" });
+        this.setState({ code: codeMap.functional, activeClass: "FUN" });
         break;
       case "Class":
-        this.setState({ code: codeMap.classComponentCode , activeClass:"CLASS"});
+        this.setState({
+          code: codeMap.classComponentCode,
+          activeClass: "CLASS"
+        });
         break;
       case "State":
-        this.setState({ code: codeMap.stateComponentCode , activeClass:"STATE"});
+        this.setState({
+          code: codeMap.stateComponentCode,
+          activeClass: "STATE"
+        });
         break;
-        case "Events":
-          this.setState({ code: codeMap.eventsComponentCode , activeClass:"EVENTS"});
-          break;
+      case "Events":
+        this.setState({
+          code: codeMap.eventsComponentCode,
+          activeClass: "EVENTS"
+        });
+        break;
       default:
     }
   }
@@ -171,22 +180,30 @@ class App extends Component {
         <div className="col-md-12 col-sm-12">
           <h2 className="text-center">React Sample Application</h2>
         </div>
-        <div className="col-md-4 col-sm-4 padding-0">
-          <FunctionalComponent
-            propToFunComponent={this.state.propToFunComponent}
-            showCode={this.showCode}
-            activeClass={this.state.activeClass}
-          />
-          <ClassComponent
-            propsToClassComponent={this.state.propsToClassComponent}
-            showCode={this.showCode}
-            activeClass={this.state.activeClass}
-          />
-          <StateupdatComponent showCode={this.showCode} activeClass={this.state.activeClass}/>
-          <EventsComponent showCode={this.showCode} activeClass={this.state.activeClass}/>
-        </div>
-        <div className="col-md-8 col-sm-8">
-          <pre>{this.state.code}</pre>
+        <div className=" col-md-12 col-sm-12 padding-0 overflow-y-auto">
+          <div className="col-md-4 col-sm-4 padding-0">
+            <FunctionalComponent
+              propToFunComponent={this.state.propToFunComponent}
+              showCode={this.showCode}
+              activeClass={this.state.activeClass}
+            />
+            <ClassComponent
+              propsToClassComponent={this.state.propsToClassComponent}
+              showCode={this.showCode}
+              activeClass={this.state.activeClass}
+            />
+            <StateupdatComponent
+              showCode={this.showCode}
+              activeClass={this.state.activeClass}
+            />
+            <EventsComponent
+              showCode={this.showCode}
+              activeClass={this.state.activeClass}
+            />
+          </div>
+          <div className="col-md-8 col-sm-8">
+            <pre>{this.state.code}</pre>
+          </div>
         </div>
       </div>
     );

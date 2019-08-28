@@ -1,0 +1,40 @@
+html,
+body {
+  font-family: "Lato", serif;
+  color: #333;
+  height: 100%;
+  /* padding-top: 40px; */
+  letter-spacing: normal;
+  overflow-y: auto;
+  font-weight: normal;
+}
+
+.green {
+  color: green;
+}
+
+.marginT10 {
+  margin-top: 10px !important;
+}
+
+.mt-10{
+  margin-top: 10px !important;
+}
+
+.padding-0 {
+  padding: 0px !important;
+}
+
+.functional-component {
+  background-color: #ccc;
+  width: 100%;
+  padding: 15px;
+  float: left;
+}
+
+.class-component {
+  background-color: #cccccc61;
+  width: 100%;
+  padding: 15px;
+  float: left;
+}
